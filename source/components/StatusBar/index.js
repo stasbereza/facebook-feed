@@ -11,13 +11,13 @@ export default class StatusBar extends Component {
     render () {
         return (
             <Consumer>
-                {(context) => (
+                {({ avatar, currentUserFirstName, currentUserLastName }) => (
                     <section className = { Styles.statusBar }>
                         <button>
-                            <img src = { context.avatar } />
-                            <span>{ context.currentUserFirstName }</span>
+                            <img src = { avatar } />
+                            <span>{ currentUserFirstName }</span>
                             &nbsp;
-                            <span>{ context.currentUserLastName }</span>
+                            <span>{ currentUserLastName }</span>
                         </button>
                     </section>
                 )}
