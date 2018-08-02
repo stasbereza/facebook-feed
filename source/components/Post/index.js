@@ -12,10 +12,10 @@ export default class Post extends Component {
     render () {
         return (
             <Consumer>
-                {(context) => (
+                {({ avatar, currentUserFirstName, currentUserLastName }) => (
                     <section className = { Styles.post }>
-                        <img src = { context.avatar } />
-                        <a>{`${context.currentUserFirstName} ${context.currentUserLastName}`}</a>
+                        <img src = { avatar } />
+                        <a>{`${currentUserFirstName} ${currentUserLastName}`}</a>
                         <time>{moment().format('MMMM D h:mm:ss a')}</time>
                         <p>Howdy!</p>
                     </section>

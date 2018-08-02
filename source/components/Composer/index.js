@@ -11,11 +11,11 @@ export default class Composer extends Component {
     render () {
         return (
             <Consumer>
-                {(context) => (
+                {({ avatar, currentUserFirstName }) => (
                     <section className = { Styles.composer } >
-                        <img src = { context.avatar } />
+                        <img src = { avatar } />
                         <form>
-                            <textarea placeholder = { `What's on your mind, ${context.currentUserFirstName}?` } />
+                            <textarea placeholder = { `What's on your mind, ${currentUserFirstName}?` } />
                             <input type = 'submit' value = 'Post' />
                         </form>
                     </section>
