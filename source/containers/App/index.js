@@ -22,7 +22,6 @@ export default class App extends Component {
             <Provider value = { options }>
                 <Feed />
             </Provider>
-        )
-        
+        );
     }
 }
